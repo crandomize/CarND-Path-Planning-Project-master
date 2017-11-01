@@ -33,16 +33,16 @@ Improvements:
 Once we know the status of the different lines (right, left and my lane) we can decide what to do.  We use the following logic:
 
 * If cars in front and within minimum distance:
-  *  If I'm in center lane
+  * If I'm in center lane
     *  If left line clear --> Go to left  (car prefers to pass a car from its left)
     *  If only right line clear --> Go to right 
     *  If no right, left lines are clear then --> keep lane (follow car)
-  *  If I'm in left
-    *  If right line clear --> Go to right
-    *  Otherwise keep line (follow car)
-  *  If I'm in right
-    *  If left line clear --> Go to left
-    *  Otherwise keep line (follow car)
+  * If I'm in left
+    * If right line clear --> Go to right
+    * Otherwise keep line (follow car)
+  * If I'm in right
+    * If left line clear --> Go to left
+    * Otherwise keep line (follow car)
 
 * No cars in front:
   * If car is in middle or left line and right line is clear --> go to right (**)
@@ -87,21 +87,4 @@ This is as shown in the Project Walkthough Video.  Change to Frenet coordinates 
     git checkout e94b6e1
     ```
 
-## Editor Settings
-
-We've purposefully kept editor configuration files out of this repo in order to
-keep it as simple and environment agnostic as possible. However, we recommend
-using the following settings:
-
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
-
-## Code Style
-
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
-
-## Project Instructions and Rubric
-
-Note: regardless of the changes you make, your project must be buildable using
-cmake and make!
 
